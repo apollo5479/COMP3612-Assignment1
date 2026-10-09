@@ -1,0 +1,26 @@
+footer {
+    color:lightslategray;
+    background-color: black;
+
+    nav {
+        display:flex;
+        justify-content: flex-start;
+        section {
+            margin-right: 15rem;
+            ul {
+                list-style-type: none;
+                .sectionTitle {
+                    margin-bottom: 1rem;
+                    color:white;
+                }
+            }
+        }
+    }
+    p {
+        font-size: smaller;
+        color:gray;
+    }
+}
+
+
+
