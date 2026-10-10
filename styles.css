@@ -53,7 +53,6 @@ header {
         display: inline-block;
     } 
     
-
     nav {
         display: inline-block;
         ul {
@@ -85,8 +84,6 @@ header {
     padding-left: 30%;
     font-size: x-large;
     h1 {
-        
-        
         color: white;
         font-family: 'Times New Roman', Times, serif;
     }
@@ -96,7 +93,7 @@ header {
     p {
         max-width: 30%;
         margin-bottom: 3rem;
-        color: grey;
+        color: gray;
     }
     a {
         border: 1px solid orange;
@@ -118,7 +115,8 @@ header {
     border-top: 2px solid rgb(211, 209, 209);
     transition: border-color 0.2s ease; 
     font-family: 'Times New Roman', Times, serif;
-    /* index.html styles below */
+    height: auto;
+
     h2 {
         padding-left: 3rem;
         padding-bottom: 1rem;
@@ -126,17 +124,20 @@ header {
     .indexCardFont {
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
+    .teamList {
+        gap: 1rem;
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 10rem;
+        
+    }
     ul {
         align-items: center;
         justify-content: space-evenly;
         padding-right: 40px;
         display: flex;
         list-style-type: none;
-        li article { 
-            border: 3px solid lightgray;
-            border-radius: 7px;
-            border-top-color: teal;
-            transition: border-top-color 0.2s ease; 
+        article { 
             .cardDetails {
                 display:block;
                 background-color: white;
@@ -149,7 +150,44 @@ header {
                     text-align: center;
                     text-decoration: none;
                     color: inherit;
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 }
+                p {
+                    margin-top: -1rem;
+                    color: gray;
+                }
+            }
+            p {
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        }
+        .cards {
+            width: 120%;
+            transition: border-top-color 0.2s ease; 
+            border: 3px solid lightgray;
+            border-top-color: teal;
+            border-radius: 7px;
+        }
+        .teamPhoto {
+            border: 3px solid lightgray;
+            overflow: hidden;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+        .teamCard {
+            height: auto;
+            p {
+                margin-top: -0.7rem;
+                color: gray;
+            }
+            .teamRole {
+                font-family: 'Times New Roman', Times, serif;
+                color: orange;
             }
         }
         .cards:hover {
@@ -166,15 +204,14 @@ header {
             justify-content: center;
             align-items: center;
             padding: 3rem;
-        }
-        .productImage img {
-            max-width: 90%;
-            max-height: 100%;
-            object-fit:contain;
+            img {
+                max-width: 90%;
+                max-height: 100%;
+                object-fit: contain;
+            }
         }
     }
 
-    /* about.html styles below */
     #aboutHTMLarticle {
         display: flex;
         justify-content: space-evenly;
@@ -189,11 +226,9 @@ header {
         display: inline-block;
         color: gray;
         max-width: 40%;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    .paddingPlease {
-        padding: 1rem;
-        padding-left: 2.5rem;
-    }
+    
     div.getInTouchCards {
         padding: 1rem;
         padding-right: 7rem;
@@ -217,10 +252,263 @@ header {
     }
 }
 
-.whiteSection {
-    padding-left: 2.5rem;
+.noLinkDecorations {
+    text-decoration: none;
+    color: inherit;
+}
+
+.active {
+    border-bottom: 1px solid orange;
+    color: black;
+}
+
+.inactive {
+    color: gray;
+}
+
+.flexDisplay {
+    display: flex;
+    gap: 1rem;
+    padding-left: 0rem;
+}
+
+.addToCart {
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+.addToWishlist{
     background-color: white;
-    max-width: 50%;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+.quantitySelection {
+    label {
+        display: block;
+    }
+    input {
+        width: 5.95%;
+        -moz-appearance: textfield; /*found from googling*/
+    }
+    margin-bottom: 1rem;
+}
+
+.sizeSelection {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 1rem;
+    button {
+        padding: 0.5rem;
+        border: 1px solid gray; 
+        border-radius: 4px;
+        background-color: white;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: gray;
+    }
+    
+}
+
+.colorSelection {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 1rem;
+    border: 0;
+    button {
+        transition: border-color 0.3s ease;
+    }
+    input{
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    button:hover {
+        border: 1px solid black;
+    }
+    .cream {
+        background-color: #dcd9cc;
+    }
+
+    .gray {
+        background-color: gray;
+    }
+
+    .navy {
+        background-color: rgb(0, 0, 77);
+    }
+
+    .orange {
+        background-color: rgb(180, 87, 1);
+    }
+}
+.colorButton {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+}
+
+.productActions {
+    button {
+        transition: background-color 0.3s ease;
+    }
+    button.addToCart:hover {
+        background-color: rgb(155, 101, 1);
+    }
+    button.addToWishlist:hover {
+        background-color: rgb(126, 126, 125);
+    }
+}
+
+.customerReviews {
+    .reviewHeader {
+        align-items: center;
+        justify-content: space-between;
+    }
+    time {
+        font-family: 'Times New Roman', Times, serif;
+        color: gray;
+    }
+}
+
+.lineAbove {
+    border-top: 1px solid gray;
+}
+
+#specifications {
+    padding-bottom: 1rem;
+    table {
+        border-collapse: collapse;
+    }
+    tr {
+        padding-block: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 10rem;
+        th {
+            width: 100%;
+            text-align: left;
+        }
+        td {
+            padding-right: 9rem;
+            width: 320%;
+        }
+    }
+}
+
+.productGallery {
+    margin-right: 12rem;
+}
+
+.productOverview {
+    .mainProductImage {
+        width: 160%;
+        img {
+            width: 100%;
+        }
+    }
+    .productThumbnails {
+        img {
+            margin-top: 1rem;
+            width: 50%;
+        }
+        gap: 2rem;
+        width: 160%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    padding-block: 2rem;
+}
+
+.productInformation {
+    align-items:end;
+    padding-left: 2rem;
+    h1 {
+        margin-top: -0.5rem;
+        margin-bottom: -1rem;
+        width: 15%;
+    }
+}
+
+
+
+.noBorder {
+    border: 0px;
+}
+
+.teamList {
+    gap: 1rem;
+    display: flex;
+    align-items: stretch;
+}
+
+.colorGray {
+    color: gray;
+}
+
+.paddingPlease {
+    padding: 1rem;
+    padding-left: 2.5rem;
+}
+
+.hugLeft {
+    
+    max-width: 30%;
+}
+
+.stars {
+    color: rgb(235, 172, 0);
+}
+
+.productRating {
+    color: rgb(235, 172, 0);
+}
+
+.productOverview {
+    display: flex;
+}
+
+.productPrice {
+    font-size:xx-large;
+    margin-block: -0.5rem;
+}
+
+.productDescription {
+    font-size:medium;
+}
+
+.timesNewRoman {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.otherFontIDK {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.detailTabs {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+
+main {
+    background-color: rgb(240, 238, 238);
+}
+
+.productChain {
+    background-color: white;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.whiteSection {
+    background-color: white;
     p {
         color: gray;
     }
@@ -229,14 +517,100 @@ header {
     }
     .centerPlease {
         max-width: 100%;
-        justify-content: right;
+        justify-content: center;
         color: rgb(72, 97, 97);
-        background-color: pink;
-        display:block;
+        display:flex;
     }
+    .timeline {
+        h3 {
+            font-family: 'Times New Roman', Times, serif;
+            color: green;
+            margin-bottom: -1rem;
+            margin-top: 2rem;
+        }
+        p {
+            color: black;
+        }
+        border-left: 2px solid lightgray;
+        list-style: none;
+        li {
+            position: relative; /*found from the google ai when you search stuff up; this specifically fixes the alignment issue from resizing my browser*/
+        }
+        li::before { /*https://youtu.be/wdlxBhxKCB8*/
+            content: '•';
+            display: inline-block; 
+            color: orange;
+            position: absolute;
+            left: -47px;
+            font-size: x-large;
+        }
+    }
+    .valuesCards {
+        background-color: rgb(226, 227, 228);
+        border: 1px solid gray;
+        border-radius: 4px;
+        padding-top: 4rem;
+        h3 {
+            display:inline-block;
+            padding:1rem;
+            padding-bottom: 0.5rem;
+            padding-top: 0.5rem;
+            font-size: x-large;
+            background-color: rgb(25, 25, 25);
+            border: 1px solid rgb(25, 25, 25);
+            border-radius: 4px;
+            margin-bottom: -0.5rem;
+            margin-top: -2rem;
+        }
+        h2 {
+            margin-bottom: -0.5rem;
+        }
+    }
+    ul {
+        padding: 1rem;
+        margin-top: -1rem;
+    }
+}
+
+.noListDecorations {
+    list-style: none;
+}
+
+.white {
+    color: white;
+}
+
+.teal {
+    color: teal;
+}
+
+.orange {
+    color: orange;
+}
+
+.gray {
+    color:gray;
 }
 
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+header li {
+    border: 1px solid rgb(25, 25, 25);
+    transition: border-color 0.3s ease; 
+}
+footer li {
+    a {
+        border: 1px solid rgb(25, 25, 25);
+        transition: border-color 0.3s ease; 
+    }
+}
+header li:hover {
+    border-bottom: 1px solid orange;
+}
+footer li {
+    a:hover {
+        border-bottom: 1px solid orange;
+    }
+}
