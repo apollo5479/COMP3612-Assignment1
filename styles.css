@@ -105,7 +105,7 @@ header {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    h1::after { /*found from the ai at the top of google searches*/
+    h1::before { /*found from the ai at the top of google searches*/
         content: "{}";
         letter-spacing: 10rem;
         position: absolute;
