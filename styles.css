@@ -105,6 +105,15 @@ header {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+    h1::after { /*found from the ai at the top of google searches*/
+        content: "{}";
+        letter-spacing: 10rem;
+        position: absolute;
+        font-size: 300px;
+        top: 30px;
+        right: -170px;
+        opacity: 5%;
+    }
 }
 
 .greySection {
@@ -128,8 +137,7 @@ header {
         gap: 1rem;
         display: flex;
         align-items: stretch;
-        margin-bottom: 10rem;
-        
+        margin-bottom: -5rem;
     }
     ul {
         align-items: center;
@@ -171,7 +179,7 @@ header {
         .teamPhoto {
             border: 3px solid lightgray;
             overflow: hidden;
-            
+            height: 70%;
             img {
                 width: 100%;
                 height: 100%;
@@ -261,9 +269,23 @@ header {
     border-bottom: 1px solid orange;
     color: black;
 }
-
+.active:hover {
+    font-weight: bold;
+}
 .inactive {
     color: gray;
+}
+.inactive:hover {
+    color: black;
+    font-weight: bold;
+}
+.detailTabs {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    display: flex;
+    a {
+        padding-block: 1rem;
+    }
 }
 
 .flexDisplay {
@@ -489,12 +511,6 @@ header {
 
 .otherFontIDK {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.detailTabs {
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    display: flex;
 }
 
 main {
