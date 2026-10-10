@@ -113,6 +113,7 @@ header {
         top: 30px;
         right: -170px;
         opacity: 5%;
+        pointer-events: none; /*found from the ai at the top of google searches*/
     }
 }
 
